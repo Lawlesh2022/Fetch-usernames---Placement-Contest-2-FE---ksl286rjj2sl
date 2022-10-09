@@ -21,7 +21,7 @@ const App = () => {
           setName(e.name)          
         }
         if(input == ""){
-          setName("")
+          setName('Woodrow Davis')
         }
      })     
 
