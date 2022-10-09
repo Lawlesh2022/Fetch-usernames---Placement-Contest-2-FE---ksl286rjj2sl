@@ -2,10 +2,19 @@ import React from 'react'
 import '../styles/App.css';
 import { useState, useEffect } from 'react';
 const App = () => {
-//code here 
- 
+ const[name, setName] = useState("");
+    const[data, setData] = useState("");
 
-
+    const url = "https://content.newtonschool.co/v1/pr/main/users"
+    useEffect(()=>{
+       fetchData()
+    }, []);
+        const fetchData = ()=>{
+            fetch(url).then((res)=>res.json()).then((response)=>{
+            console.log(response);
+            setData(response)
+        })
+    }
 
   return (
     <div className="App">
